@@ -29,7 +29,10 @@ public class PublicFileUUIDCreator implements DeviceIDCreator {
     public PublicFileUUIDCreator(Context context) {
         ApplicationInfo applicationInfo = context.getApplicationInfo();
         String dirName = context.getString(applicationInfo.labelRes);
-        mDeviceIDFile = new File(new File(Environment.getExternalStorageDirectory(), dirName), "device_id.txt");
+        mDeviceIDFile = new File(new File(
+                Environment.getExternalStorageDirectory(),
+                dirName),
+                "device_id.txt");
     }
 
     @Override
