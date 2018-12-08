@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.widget.TextView;
 
 import com.niles.deviceid.DeviceIDUtils;
-import com.niles.deviceid.PublicFileUUIDCreator;
+import com.niles.deviceid.PhoneIDCreator;
 
 public class MainActivity extends MainPermissionActivity {
 
@@ -17,7 +17,7 @@ public class MainActivity extends MainPermissionActivity {
 
         mDeviceIDView = findViewById(R.id.tv_device_id);
 
-        DeviceIDUtils.setDeviceIDCreator(new PublicFileUUIDCreator(this));
+        DeviceIDUtils.setDeviceIDCreator(new PhoneIDCreator(this));
 
         requestStorage();
     }
